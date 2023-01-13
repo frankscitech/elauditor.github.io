@@ -20,8 +20,6 @@
 
             $.getJSON(banner_config_url, function (data) {
 
-                alert(data.config.banner_target_url);
-
                 $('#banner').attr('href', data.config.banner_target_url) 
 
             });
