@@ -1,6 +1,5 @@
 {
-    "config": {
-        "banner_url": "https://thispersondoesnotexist.com"
-        }
-   
+   "config":{
+      "banner_url":"https://thispersondoesnotexist.com"
+   }
 }
