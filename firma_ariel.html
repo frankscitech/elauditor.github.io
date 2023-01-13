@@ -8,27 +8,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
 
-    <!-- CUSTOM -->
+    <!-- CUSTOM  by Franco -->
+
     <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+
     <script type="text/javascript">
-        var banner_target_url = 'https://thispersondoesnotexist.com';
-        //var banner_target_url = 'https://www.elauditor.com.ar/archivos/camiseta-libreria.jpg; 
-        var banner_config_url = 'https://raw.githubusercontent.com/frankscitech/elauditor.github.io/main/banner_config.json';
-        $.getJSON(banner_config_url, function (data) {
 
-            json = $.parseJSON(data);
-            for (var i = 0; i < json.length; ++i) {
-                $('#resultss').append('<div>' + json[i].name + '</>');
-            }
+        $(document).ready(function () {
 
-            // $('#banner').attr('href',banner_target_url)
+            var banner_config_url = 'https://raw.githubusercontent.com/frankscitech/elauditor.github.io/main/banner_config.json';
+
+            $.getJSON(banner_config_url, function (data) {
+
+                $('#banner').attr('href', data.config.banner_target_url) 
+
+            });
         });
     </script>
+    
     <!-- END CUSTOM -->
 </head>
 
 <body>
-    <div id="resultss"></div>
     <div id=":22p" class="IN" style="display: block;">
         <div id=":238" class="Am aiL IP Al editable Xp0HJf-LW-avf" hidefocus="true" aria-label="Firma"
             g_editable="false" aria-multiline="true" contenteditable="false" style="direction: ltr;"><br>
@@ -187,10 +188,12 @@
             </div>
         </div>
     </div>
+    <!-- CUSTOM  by Franco -->
     <a id="banner" target="_blank">
         <font id="banner" color="#0b5394"><img <img
                 src="https://www.elauditor.com.ar/archivos/BANNER_FIRMA_LIBRERIA.png" style="margin-top:20px"> </font>
     </a>
+    <!-- CUSTOM  by Franco -->
     <style>
         div {}
 
