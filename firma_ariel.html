@@ -15,11 +15,12 @@
         //var banner_target_url = 'https://www.elauditor.com.ar/archivos/camiseta-libreria.jpg; 
         var banner_config_url = 'https://raw.githubusercontent.com/frankscitech/elauditor.github.io/main/banner_config.json';
         $.getJSON(banner_config_url, function (data) {
-            $.each(data, function (index, element) {
-                $('body').append($('<div>', {
-                    text: element.name
-                }));
-            });
+
+            json = $.parseJSON(data);
+            for (var i = 0; i < json.length; ++i) {
+                $('#resultss').append('<div>' + json[i].name + '</>');
+            }
+
             // $('#banner').attr('href',banner_target_url)
         });
     </script>
@@ -27,6 +28,7 @@
 </head>
 
 <body>
+    <div id="resultss"></div>
     <div id=":22p" class="IN" style="display: block;">
         <div id=":238" class="Am aiL IP Al editable Xp0HJf-LW-avf" hidefocus="true" aria-label="Firma"
             g_editable="false" aria-multiline="true" contenteditable="false" style="direction: ltr;"><br>
